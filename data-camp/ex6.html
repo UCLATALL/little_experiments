@@ -44,7 +44,7 @@ antibodies <- c(rep(1,3), rep(0,119))
 do(1000) * sum(sample(antibodies, 100)) -> bunch_of_sums
 
 # tallies up these random samples
-tally(~ sum, data = bunch_of_sums
+tally(~ sum, data = bunch_of_sums)
 
         </code>
 
