@@ -2,6 +2,8 @@
 <html>
 
 
+
+
 <head>
     <meta charset="UTF-8">
     <title>Data Science, Exercise 3</title>
@@ -12,30 +14,43 @@
 <body>
     <div data-datacamp-exercise data-lang="r" data-show-run-button=true data-show-solution-before=false data-no-lazy-load=true>
 
+
         <code data-type="pre-exercise-code">
-            require(tidyverse)
             require(mosaic)
-            require(coursekata)
-            require(supernova)
+            require(tidyverse)
             require(ggformula)
+
+
+antibodies <- c(rep(1,3), rep(0,119))
+
+
+
         </code>
 
+
+
+
         <code data-type="sample-code">
-            # write code to create a frequency table of Thumb
+# add the function sum() to the code below
+sample(antibodies,100)
         </code>
-        <code data-type="solution">
-            tally(~Thumb, data = Fingers)
-        </code>
+
+
+
+
+        <code data-type="solution"></code>
+
+sum(sample(antibodies,100))
+
+
         <code data-type="sct">
-            ex() %>% check_function("tally") %>% {
-                check_arg(., "x") %>% check_equal()
-                check_arg(., "data") %>% check_equal()
-                check_result(.) %>% check_equal()
-            }
+            
         </code>
-        <div data-type="hint">Use the same code as you used above, just tally the variable Thumb</div>
+        <div data-type="hint">Try this: sum(sample(antibodies,100))</div>
     </div>
 </body>
+
+
 
 
 </html>

@@ -1,68 +1,39 @@
 ﻿<!DOCTYPE html>
 <html>
 
-
-
-
 <head>
     <meta charset="UTF-8">
     <title>Data Science, Exercise 2</title>
     <script async src="https://cdn.jsdelivr.net/gh/uclatall/datacamp-light@build/dist/dcl-react.js"></script>
 </head>
 
-
-
-
 <body>
     <div data-datacamp-exercise data-lang="r" data-show-run-button=true data-show-solution-before=false data-no-lazy-load=true>
-
-
-
-
         <code data-type="pre-exercise-code">
-            require(mosaic)
             require(tidyverse)
+            require(mosaic)
+            require(coursekata)
+            require(supernova)
             require(ggformula)
-
-
-antibodies <- c(rep(1,3), rep(0,119))
-
-
-
-
-
-
-
-
-
-
         </code>
-
-
-
-
         <code data-type="sample-code">
-sample(antibodies,100)
-
-
+            # Add margin and format arguments to the tally() function. Set margins to TRUE and format to proportion
+            tally(~ RaceEthnic, data = Fingers)
         </code>
-
-
-
-
-        <code data-type="solution"></code>
-
-
-
-
+        <code data-type="solution">
+            # Add margin and format arguments to the tally() function. Set margins to TRUE and format to proportion
+            tally(~ RaceEthnic, data = Fingers, margins = TRUE, format = "proportion")
+        </code>
         <code data-type="sct">
-            
+            ex() %>% check_function("tally") %>% {
+                check_arg(., "margins") %>% check_equal()
+                check_arg(., "format") %>% check_equal()
+                check_result(.) %>% check_equal()
+            }
         </code>
-        <div data-type="hint">Just press run and observe what happens.</div>
+        <div data-type="hint">Don't forget to use quotations around proportion. You code should include <code>format = "proportion"</code></div>
     </div>
 </body>
-
-
 
 
 </html>
