@@ -17,25 +17,19 @@
             require(ggformula)
         </code>
         <code data-type="sample-code">
-            # This creates a frequency table of Sex
+            # This creates a frequency table of Gender
             # Do not change this code
-            tally(~ Sex, data = Fingers)
+            tally(~ Gender, data = StudentSurvey)
 
-            # Write code to create a frequency table of RaceEthnic
+            # Write code to create a frequency table of Smoke
         </code>
         <code data-type="solution">
-            # This creates a frequency table of Sex
-            # Do not change this code
-            tally(~ Sex, data = Fingers)
-
-            # Write code to create a frequency table of RaceEthnic
-            tally(~ RaceEthnic, data = Fingers)
+            
         </code>
         <code data-type="sct">
-            ex() %>% check_function(., "tally", index = 2) %>% check_result() %>% check_equal()
-            success_msg("You're a supe-R coder!")
+            
         </code>
-        <div data-type="hint">Use given code as a guide. Just copy it and change Sex to RaceEthnic</div>
+        <div data-type="hint">Use given code as a guide. Just copy it and change Gender to Smoke </div>
     </div>
 </body>
 
